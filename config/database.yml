@@ -19,11 +19,18 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
+  # database: hellorails
+  username: postgres
+  password: Jkr__025879.-
+  # 
+  # host: localhost IN MY CASE IT COULD BE LOCALHOST OR THE LOCAL IP
+  host: localhost
+  port: 5432
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: hellorails_development
+  database: hellorails
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
